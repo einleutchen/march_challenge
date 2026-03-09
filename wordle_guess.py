@@ -1,5 +1,3 @@
-import getpass
-
 def wordle_guess(secret : str, guess : str):
   # Write code below 💖
   """
@@ -23,8 +21,5 @@ def wordle_guess(secret : str, guess : str):
   except (TypeError, AttributeError) as error:
     print("must be string")
     print(erorr)
-
-secret = getpass.getpass("Enter a secret word: ")
-guess = input("Enter your guess: ")
 
 print(wordle_guess(secret, guess))
