@@ -1,5 +1,12 @@
 def find_missing_colors(grid):
   # Write code below 💖
+  """
+  Find the emojis that are missing from a given array of emojis
+  Args:
+  grid (list of list): arrays of emojis
+  Returns:
+  the missing emojis in order
+  """
   given_array = ["🟥", "🟧", "🟨", "🟩", "🟦", "🟪", "🟫"]
   diff_list = []
   for i in grid:
