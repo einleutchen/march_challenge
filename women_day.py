@@ -1,5 +1,12 @@
 def analyze(percentages):
   # Write code below 💖
+  """
+  Return the net change, trend and dips in percentage of women in tech companies
+  Args:
+  percentages (list): percentage of women in each year
+  Returns:
+  net change, trend, dips
+  """
   net_change = round((percentages[-1] - percentages[0])/(len(percentages)-1), 4)
   average = sum(percentages)/len(percentages)
   trianno = sum(percentages[-4:-1])/3
