@@ -1,5 +1,12 @@
 def dompier_music(switches):
   # Write code below 💖
+  """
+  Convert binary to dompier music
+  Args:
+  switches (list of str): binary
+  Returns:
+  the corresponding music notes
+  """
   freq = [261, 294, 329, 349, 392, 440, 494, 523, 0]
   note = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5", "REST"]
   lib = list(zip(freq, note))
