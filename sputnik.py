@@ -1,16 +1,32 @@
 def time_cal(distance, rate):
+  """
+  Calculate the time to finish a distance (km) with a given speed (km/s)
+  Args:
+  distance (list): start and end points
+  rate (int): velocity value
+  Returns:
+  time in seconds
+  """
   diff = (distance[-1] - distance[0])
   time = diff/rate
   return time
 
 def calculate_descent(altitude):
   # Write code below 💖
-  exosphere = time_cal([700,1000], 2)
+  """
+  Calculate the total descent time from a given altitude till the ground
+  Args:
+  altitude (int): number not exceeding 10000km
+  Returns:
+  total time in seconds
+  """
+  exosphere = time_cal([700,10000], 2)
   thermosphere = time_cal([85, 700], 0.5)
   mesosphere = time_cal([50, 85], 0.2)
   stratosphere = time_cal([12, 50], 0.075)
   troposphere = time_cal([0, 12], 0.02)
   atm = [exosphere, thermosphere, mesosphere, stratosphere, troposphere]
+  
   if altitude > 700:
     total_time = round(time_cal([700, altitude], 2) + sum(atm[1:]),1)
   elif 85 < altitude and altitude < 700:
