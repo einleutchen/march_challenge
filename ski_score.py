@@ -1,5 +1,12 @@
 def calculate_score(elements):
   # Write code below 💖
+  """
+  Calculate the total score of ski perfomer achieves
+  Args:
+  elements (list of tuple): tuple contains action, base value, list of GOE
+  Returns:
+  total score of all actions
+  """
   score = []
   for tup in elements:
     GOE = list(tup[-1])
